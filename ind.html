@@ -8,16 +8,43 @@
 </head>
 
 <body>
-    <input type="button" name="lenght" id="len" onclick="cos()" value="Создать API токен">
-    <h3 id="res">Создайте API токен нажав на кнопку выше</h3>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0px;
+            padding: 0px;
+        }
 
+        .out {
+            background-color: rgb(77, 50, 50);
+            color: white;
+            width: 600px;
+            height: 120px;
+            font-size: 50px;
+        }
+
+        .but {
+            height: 80px;
+            width: 100px;
+            background-color: rgb(153, 195, 233);
+            color: white;
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 60px;
+        }
+    </style>
+    <input type="text" class="out" id="summ" placeholder="Калькулятор">
+    <input type="button" class="but" onclick="summingFunc()" value="Считать">
+    <h3 id="res"></h3>
 
     <script>
-        function cos() {
-            var x;
-            x = "JG836JDg637Yd73:09";
-            document.getElementById('res').innerHTML = x;
-            alert('Успешно! Ваш API токен: ' + x)
+        function summingFunc() {
+            summing = document.getElementById('summ').value
+            document.getElementById('res').innerHTML = 'Ответ: ' + eval(summing);
+            alert('Ответ: ' + eval(summing))
         }
     </script>
 </body>
